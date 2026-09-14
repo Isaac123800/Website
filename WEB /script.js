@@ -1,50 +1,71 @@
-/* ================================
-FREEDOM OF OPINION - JAVASCRIPT
-================================ */
+/* =================================
+DARK / LIGHT MODE
+================================= */
 
-// Find the opinion form
+const themeButton = document.getElementById("themeButton");
+
+themeButton.addEventListener("click", function () {
+
+```
+document.body.classList.toggle("dark-mode");
+
+if (document.body.classList.contains("dark-mode")) {
+    themeButton.textContent = "☀️ Light Mode";
+    localStorage.setItem("theme", "dark");
+} else {
+    themeButton.textContent = "🌙 Dark Mode";
+    localStorage.setItem("theme", "light");
+}
+```
+
+});
+
+/* =================================
+REMEMBER THEME
+================================= */
+
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "dark") {
+document.body.classList.add("dark-mode");
+themeButton.textContent = "☀️ Light Mode";
+}
+
+/* =================================
+OPINION FORM
+================================= */
+
 const opinionForm = document.getElementById("opinionForm");
-
-// Find the message area
 const formMessage = document.getElementById("formMessage");
 
-// Handle form submission
 opinionForm.addEventListener("submit", function (event) {
 
 ```
-// Stop the page from refreshing
 event.preventDefault();
 
-// Get the user's name
 const name = document.getElementById("name").value.trim();
-
-// Get the user's opinion
 const opinion = document.getElementById("opinion").value.trim();
 
-// Check that both fields have been completed
 if (name === "" || opinion === "") {
     formMessage.textContent = "Please fill in both fields.";
     formMessage.style.color = "#dc2626";
     return;
 }
 
-// Show a success message
 formMessage.textContent =
     `Thank you, ${name}! Your opinion has been submitted.`;
 
 formMessage.style.color = "#16a34a";
 
-// Clear the form
 opinionForm.reset();
 ```
 
 });
 
-// ================================
-// SMOOTH NAVIGATION
-// ================================
+/* =================================
+SMOOTH NAVIGATION
+================================= */
 
-// Add smooth scrolling to navigation links
 const navigationLinks = document.querySelectorAll("nav a");
 
 navigationLinks.forEach(function (link) {
@@ -54,7 +75,6 @@ link.addEventListener("click", function (event) {
 
     const targetId = this.getAttribute("href");
 
-    // Make sure the link points to a section on this page
     if (targetId.startsWith("#")) {
 
         const targetSection = document.querySelector(targetId);
@@ -64,5 +84,10 @@ link.addEventListener("click", function (event) {
 
             targetSection.scrollIntoView({
                 behavior: "smooth"
+            });
+        }
+    }
+});
 ```
 
+});
