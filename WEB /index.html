@@ -7,9 +7,8 @@
 
 ```
 <title>Freedom of Opinion</title>
-<meta name="description" content="A website exploring freedom of opinion, expression, and respectful discussion.">
+<meta name="description" content="A website about freedom of opinion and respectful expression.">
 
-<!-- Connects the HTML to your CSS file -->
 <link rel="stylesheet" href="style.css">
 ```
 
@@ -18,10 +17,9 @@
 <body>
 
 ```
-<!-- Header -->
 <header>
     <div class="logo">
-        <h2>Freedom of Opinion</h2>
+        <h2>🕊️ Freedom of Opinion</h2>
     </div>
 
     <nav>
@@ -29,90 +27,88 @@
         <a href="#about">About</a>
         <a href="#rights">Our Rights</a>
         <a href="#contact">Contact</a>
+        <button id="themeButton" type="button">🌙 Dark Mode</button>
     </nav>
 </header>
 
 <main>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Freedom of Opinion</h1>
+            <h1>Your Voice Matters</h1>
 
             <p>
-                Everyone should have the freedom to express their
-                thoughts, ideas and opinions respectfully.
+                Freedom of opinion allows people to express their
+                thoughts, ideas and beliefs while respecting others.
             </p>
 
             <a href="#about" class="button">Learn More</a>
         </div>
     </section>
 
-    <!-- About Section -->
     <section class="about" id="about">
         <h2>What Is Freedom of Opinion?</h2>
 
         <p>
             Freedom of opinion means that people have the right to
-            hold their own thoughts, beliefs and viewpoints. It is an
-            important part of an open and democratic society.
+            hold their own thoughts, beliefs and viewpoints.
         </p>
 
         <p>
-            People can have different opinions, and respectful
-            disagreement can help us understand different perspectives.
+            A healthy society allows people to have different opinions
+            and encourages respectful discussion and open-mindedness.
         </p>
     </section>
 
-    <!-- Rights Section -->
     <section class="rights" id="rights">
         <h2>Why Does It Matter?</h2>
 
         <div class="cards">
 
             <div class="card">
-                <h3>🗣️ Expression</h3>
+                <div class="card-icon">🗣️</div>
+                <h3>Expression</h3>
                 <p>
-                    People should be able to share their ideas and
-                    opinions without unnecessary restrictions.
+                    People should be able to share their ideas,
+                    thoughts and opinions.
                 </p>
             </div>
 
             <div class="card">
-                <h3>🤝 Respect</h3>
+                <div class="card-icon">🤝</div>
+                <h3>Respect</h3>
                 <p>
-                    Freedom of opinion works best when people listen
-                    to and respect different points of view.
+                    We can disagree with others while still treating
+                    them with respect.
                 </p>
             </div>
 
             <div class="card">
-                <h3>🌍 Diversity</h3>
+                <div class="card-icon">🌍</div>
+                <h3>Diversity</h3>
                 <p>
-                    Different opinions and perspectives can contribute
-                    to a more open and understanding society.
+                    Different perspectives can help us understand
+                    the world in new ways.
                 </p>
             </div>
 
         </div>
     </section>
 
-    <!-- Discussion Section -->
     <section class="discussion">
         <h2>Different Opinions, One Community</h2>
 
         <p>
-            We may not always agree with each other, but we can still
-            communicate, listen and learn from different perspectives.
+            We do not always have to agree. Listening to different
+            perspectives can help us learn and understand each other.
         </p>
 
         <blockquote>
-            "Having a different opinion does not mean we have to stop
-            listening to one another."
+            "Different opinions can exist without losing respect
+            for one another."
         </blockquote>
     </section>
 
-    <!-- Contact Section -->
     <section class="contact" id="contact">
         <h2>Share Your Thoughts</h2>
 
@@ -121,7 +117,9 @@
         </p>
 
         <form id="opinionForm">
+
             <label for="name">Your Name</label>
+
             <input
                 type="text"
                 id="name"
@@ -131,6 +129,7 @@
             >
 
             <label for="opinion">Your Opinion</label>
+
             <textarea
                 id="opinion"
                 name="opinion"
@@ -139,7 +138,10 @@
                 required
             ></textarea>
 
-            <button type="submit">Submit Opinion</button>
+            <button type="submit">
+                Submit Opinion
+            </button>
+
         </form>
 
         <p id="formMessage"></p>
@@ -147,15 +149,12 @@
 
 </main>
 
-<!-- Footer -->
 <footer>
     <p>&copy; 2026 Freedom of Opinion. All rights reserved.</p>
 </footer>
 
-<!-- Connects the HTML to your JavaScript file -->
 <script src="script.js"></script>
 ```
 
 </body>
 </html>
-
